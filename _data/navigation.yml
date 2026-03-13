@@ -1,0 +1,6 @@
+- name: 首页
+  link: /
+- name: 关于
+  link: /about/
+- name: 投稿指南
+  link: /submit/
