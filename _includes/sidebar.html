@@ -1,0 +1,36 @@
+<aside class="sidebar">
+  <div class="sidebar-widget">
+    <h3>📌 期刊信息</h3>
+    <p>《{{ site.title }}》是一本没什么用期刊。</p>
+    <p><strong>主编：</strong>{{ site.author }}</p>
+    <p><strong>ISSN：</strong>3029-{{ site.time | date: "%Y" }} (友情版)</p>
+  </div>
+
+  <div class="sidebar-widget">
+    <h3>📚 最新文章</h3>
+    <ul class="sidebar-posts">
+      {% for post in site.posts limit:5 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="sidebar-widget">
+    <h3>📮 投稿</h3>
+    <p>想投稿？直接把论文发给主编，或查看<a href="{{ '/submit/' | relative_url }}">投稿指南</a>。</p>
+  </div>
+
+  <div class="sidebar-widget">
+    <h3>🏷️ 标签（示例）</h3>
+    <div class="tag-cloud">
+      <span>计算机</span>
+      <span>文学</span>
+      <span>历史</span>
+      <span>艺术</span>
+      <span>社会学</span>
+    </div>
+  </div>
+</aside>
